@@ -15,6 +15,10 @@ rooms = [
 ]
 
 def loginPage(request):
+
+    if request.user.is_authenticated:
+        return redirect('home')
+    
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -86,7 +90,7 @@ def deleteRoom(request, pk):
 
     if request.user != room.host:
         return HttpResponse('You are not allowed here!')
-        
+
     if request.method == 'POST':
         room.delete()
         return redirect('home')
