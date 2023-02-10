@@ -15,6 +15,7 @@ rooms = [
 ]
 
 def loginPage(request):
+    page = 'login'
 
     if request.user.is_authenticated:
         return redirect('home')
@@ -32,7 +33,7 @@ def loginPage(request):
         if user is not None:
             login(request, user)
             return redirect('home')
-    context = {}
+    context = { 'page': page }
     return render(request, 'base/login_register.html', context)
 
 def logoutUser(request):
