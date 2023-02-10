@@ -130,7 +130,7 @@ def deleteRoom(request, pk):
 def deleteMessage(request, pk):
     message = Message.objects.get(id=pk)
 
-    if request.user != room.host:
+    if request.user != message.user:
         return HttpResponse('You are not allowed here!')
 
     if request.method == 'POST':
