@@ -1,7 +1,5 @@
 # Study Platform | Django App
 
-## Status: 🧑‍🔧 Em desenvolvimento
-
 #
 
 ## 🔠 Descrição
