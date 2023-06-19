@@ -1,7 +1,5 @@
 # Study Platform | Django App
 
-#
-
 ## 🔠 Descrição
 
 - Plataforma de Estudo desenvolvida para treinar conceitos do framework Django
